@@ -10,6 +10,12 @@ jobs:
         run: |
           pwd
           ls
+          echo  $GITHUB_SHA 
+          echo  $GITHUB_REPOSITORY
+          echo  $GITHUB_WORKSPACE
+          echo ${{ github.token }}
+          
+      # github action to clone your repo with the current commit
       - name: Checkout
         uses: actions/checkout@v1
       - name: List files after checkout
