@@ -12,7 +12,7 @@ jobs:
         # uses: actions/hello-wold-javascript-action@master
         # uses: actions/hello-wold-javascript-action@v1 versions follow the versioning conventions v1.1
         # uses: actions/hello-wold-javascript-action@commit-id
-        uses: actions/hello-wold-javascript-action@v1
+        uses: actions/hello-world-javascript-action@v1
         # to provide input to the action
         with:
           who-to-greet: Dany
