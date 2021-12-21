@@ -9,6 +9,7 @@ on:
     # "1,2 * * * *" at minute 1 and 2 of each hour
     # "1-3 * * * *" from minute 1 to 3 of each hour
     # "0/15 * * * *" every 15 minutes starting by minute 0 from now
+    # minimun amount of time is every 5 min
     # every 5 minutes
     # - cron: "*/5 * * * *"
     # every 6 minutes
