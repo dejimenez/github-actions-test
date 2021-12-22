@@ -2,10 +2,32 @@ name: Actions workflow
 
 # events
 on:
-  repository_dispatch:
-    types: [build]
+  push:
+    branches: 
+      - master
+      # matches features/one-string
+      - 'feature/*'
+      # one * does not include several / we need **
+      # matches feature/other/strings
+      - 'feature/**'
+      # use ! to exclude the branch
+      - '!feature/feact'
+    # we can use branches-ignore to ignore some branches but it can not be use at the same time as branches
+    # branches-ignore:
+    #   - ""
+    # tags can also be use with patterns 
+    tags:
+      - v1.*
+    # tags-ignore:
+    # to run when a js file(s) is pushed
+    paths:
+      - '**.js'
+      - '!filename.js'
+    # paths-ignore:
   pull_request:
     types: [closed, assigned, opened, reopened]
+    branches: 
+      - master
 
 jobs:
   run-github-actions:
